@@ -1,0 +1,26 @@
+{
+  "name": "speaker-native",
+  "version": "1.0.0",
+  "description": "speaker native support all browser ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indragawe73/speaker-native.git"
+  },
+  "keywords": [
+    "speaker"
+  ],
+  "author": "Indra Putra <indragawe73@gmail.com> (https://pwa-react-9a926.firebaseapp.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/indragawe73/speaker-native/issues"
+  },
+  "homepage": "https://github.com/indragawe73/speaker-native#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  }
+}
