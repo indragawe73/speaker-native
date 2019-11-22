@@ -12,12 +12,12 @@ A small library that adds native speaker that available in all browse
 
 ## Usage
 
-    var numFormatter = require('@jdaudier/number-formatter');
+    var numFormatter = require('speaker-native');
 
-    var formattedNum = numFormatter(35666);
+    var formattedNum = numFormatter('string', 'number');
   
   
-  Output should be `35,666` 
+  Output should be sound for single 'string' & all 'number'
 
 
 ## Tests
