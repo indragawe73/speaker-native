@@ -1,6 +1,6 @@
 {
   "name": "speaker-native",
-  "version": "1.0.0",
+  "version": "1.1.1",
   "description": "speaker native support all browser ",
   "main": "index.js",
   "scripts": {
