@@ -9,81 +9,81 @@ import {AudioAssets} from './audio'
  * @return {Audio voice speaker}
  */
 
-module.exports = function(pre, que) {
+module.exports = function numFormatter(pre, que) {
 	voiceQueueNative(pre, que)
 
-	audioAntrian = new Audio(AudioAssets.antrian)
-	audioKosong = new Audio(AudioAssets.kosong)
-	audioSatu = new Audio(AudioAssets.satu)
-	audioDua = new Audio(AudioAssets.dua)
-	audioTiga = new Audio(AudioAssets.tiga)
-	audioEmpat = new Audio(AudioAssets.empat)
-	audioLima = new Audio(AudioAssets.lima)
-	audioEnam = new Audio(AudioAssets.enam)
-	audioTujuh = new Audio(AudioAssets.tujuh)
-	audioDelapan = new Audio(AudioAssets.delapan)
-	audioSembilan = new Audio(AudioAssets.sembilan)
+	const audioAntrian = new Audio(AudioAssets.antrian)
+	const audioKosong = new Audio(AudioAssets.kosong)
+	const audioSatu = new Audio(AudioAssets.satu)
+	const audioDua = new Audio(AudioAssets.dua)
+	const audioTiga = new Audio(AudioAssets.tiga)
+	const audioEmpat = new Audio(AudioAssets.empat)
+	const audioLima = new Audio(AudioAssets.lima)
+	const audioEnam = new Audio(AudioAssets.enam)
+	const audioTujuh = new Audio(AudioAssets.tujuh)
+	const audioDelapan = new Audio(AudioAssets.delapan)
+	const audioSembilan = new Audio(AudioAssets.sembilan)
 
-	audioA = new Audio(AudioAssets.A)
-	audioB = new Audio(AudioAssets.B)
-	audioC = new Audio(AudioAssets.C)
-	audioD = new Audio(AudioAssets.D)
-	audioE = new Audio(AudioAssets.E)
-	audioF = new Audio(AudioAssets.F)
-	audioG = new Audio(AudioAssets.G)
-	audioH = new Audio(AudioAssets.H)
-	audioI = new Audio(AudioAssets.I)
-	audioJ = new Audio(AudioAssets.J)
+	const audioA = new Audio(AudioAssets.A)
+	const audioB = new Audio(AudioAssets.B)
+	const audioC = new Audio(AudioAssets.C)
+	const audioD = new Audio(AudioAssets.D)
+	const audioE = new Audio(AudioAssets.E)
+	const audioF = new Audio(AudioAssets.F)
+	const audioG = new Audio(AudioAssets.G)
+	const audioH = new Audio(AudioAssets.H)
+	const audioI = new Audio(AudioAssets.I)
+	const audioJ = new Audio(AudioAssets.J)
 
 	function voiceValidation(params) {
     console.log('mmmmmmmmmmmmmmmmm 1', params)
     if(params === 0) {
       setTimeout(() => { 
-        this.audioKosong.play();
+        audioKosong.play();
       }, 3000);
     }
     else if(params === 1) {
       setTimeout(() => { 
-        this.audioSatu.play();
+        audioSatu.play();
       }, 3000);
     }else if(params === 2) {
       setTimeout(() => { 
-        this.audioDua.play();
+        audioDua.play();
       }, 3000);
     }
     else if(params === 3) {
       setTimeout(() => { 
-        this.audioTiga.play()
+        audioTiga.play()
       }, 3000);
     }
     else if(params === 4) {
       setTimeout(() => { 
-        this.audioEmpat.play()
+        audioEmpat.play()
       }, 3000);
     }
     else if(params === 5) {
       setTimeout(() => { 
-        this.audioLima.play()
+        audioLima.play()
       }, 3000);
     }
     else if(params === 6) {
       setTimeout(() => { 
-        this.audioEnam.play()
+        audioEnam.play()
       }, 3000);
     }
     else if(params === 7) {
       setTimeout(() => { 
-        this.audioTujuh.play()
+        audioTujuh.play()
       }, 3000);
     }
     else if(params === 8) {
       setTimeout(() => { 
-        this.audioDelapan.play()
+        audioDelapan.play()
       }, 3000);
     }
     else if(params === 9) {
       setTimeout(() => { 
-        this.audioSembilan.play()
+        audioSembilan.play()
       }, 3000);  
     }
   }
@@ -98,49 +98,49 @@ module.exports = function(pre, que) {
         let mq = parseInt(localStorage.getItem('myQueue'));
         
         console.log('localStorage empty try', mq)
-        this.setState({
+        setState({
           myQueue: mq,
         })
         // console.log('success try')
       } catch {
         console.log('localStorage empty catch')
 
-        this.setState({
+        setState({
           myQueue: 0,
         })
       }
 
     } else {
 
-      this.audioAntrian.play();
+      audioAntrian.play();
       if(paramsTwo === 'A') {
         setTimeout(() => { 
-          this.audioA.play();   
+          audioA.play();   
         }, 2000);
       }
       else if(paramsTwo === 'B') {
         setTimeout(() => { 
-          this.audioB.play();   
+          audioB.play();   
         }, 2000);
       }
       else if(paramsTwo === 'C') {
         setTimeout(() => { 
-          this.audioC.play();   
+          audioC.play();   
         }, 2000);
       }
       else if(paramsTwo === 'D') {
         setTimeout(() => { 
-          this.audioD.play();   
+          audioD.play();   
         }, 2000);
       }
       else if(paramsTwo === 'E') {
         setTimeout(() => { 
-          this.audioE.play();   
+          audioE.play();   
         }, 2000);
       }
       else if(paramsTwo === 'F') {
         setTimeout(() => { 
-          this.audioF.play();   
+          audioF.play();   
         }, 2000);
       }
 
