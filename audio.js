@@ -1,4 +1,5 @@
-export const AudioAssets = {
+var AudioAssets = {
+// export const AudioAssets = {
     kosong: require('./voice/nol.mp3'),
     satu: require('./voice/satu.mp3'),
     dua: require('./voice/dua.mp3'),
@@ -21,3 +22,5 @@ export const AudioAssets = {
     I: require('./voice/I.mp3'),
     J: require('./voice/J.mp3'),
 }
+
+module.exports = AudioAssets;

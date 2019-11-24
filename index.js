@@ -1,6 +1,7 @@
 'use strict';
 
-import {AudioAssets} from './audio'
+
+// var AudioAssets = require('./audio');
 
 /**
  * Adds commas to a number
@@ -9,34 +10,24 @@ import {AudioAssets} from './audio'
  * @return {Audio voice speaker}
  */
 
-module.exports = function numFormatter(pre, que) {
+module.exports = function(pre, que) {
 	voiceQueueNative(pre, que)
-
-	const audioAntrian = new Audio(AudioAssets.antrian)
-	const audioKosong = new Audio(AudioAssets.kosong)
-	const audioSatu = new Audio(AudioAssets.satu)
-	const audioDua = new Audio(AudioAssets.dua)
-	const audioTiga = new Audio(AudioAssets.tiga)
-	const audioEmpat = new Audio(AudioAssets.empat)
-	const audioLima = new Audio(AudioAssets.lima)
-	const audioEnam = new Audio(AudioAssets.enam)
-	const audioTujuh = new Audio(AudioAssets.tujuh)
-	const audioDelapan = new Audio(AudioAssets.delapan)
-	const audioSembilan = new Audio(AudioAssets.sembilan)
-
-	const audioA = new Audio(AudioAssets.A)
-	const audioB = new Audio(AudioAssets.B)
-	const audioC = new Audio(AudioAssets.C)
-	const audioD = new Audio(AudioAssets.D)
-	const audioE = new Audio(AudioAssets.E)
-	const audioF = new Audio(AudioAssets.F)
-	const audioG = new Audio(AudioAssets.G)
-	const audioH = new Audio(AudioAssets.H)
-	const audioI = new Audio(AudioAssets.I)
-	const audioJ = new Audio(AudioAssets.J)
+  
 
 	function voiceValidation(params) {
-    console.log('mmmmmmmmmmmmmmmmm 1', params)
+  // var voiceValidation = function voiceValidation(params) {
+    
+    var audioKosong = new Audio('./voice/nol.mp3');
+    var audioSatu = new Audio('./voice/satu.mp3');
+    var audioDua = new Audio('./voice/dua.mp3');
+    var audioTiga = new Audio('./voice/tiga.mp3');
+    var audioEmpat = new Audio('./voice/empat.mp3');
+    var audioLima = new Audio('./voice/lima.mp3');
+    var audioEnam = new Audio('./voice/enam.mp3');
+    var audioTujuh = new Audio('./voice/tujuh.mp3');
+    var audioDelapan = new Audio('./voice/delapan.mp3');
+    var audioSembilan = new Audio('./voice/sembilan.mp3');
+    
     if(params === 0) {
       setTimeout(() => { 
         audioKosong.play();
@@ -89,13 +80,14 @@ module.exports = function numFormatter(pre, que) {
   }
 
   function voiceQueueNative(pre, que) {
-    let params = parseInt(que);
-    let paramsTwo = pre;
+  // var voiceQueueNative = function voiceQueueNative(pre, que) {
+    var params = parseInt(que);
+    var paramsTwo = pre;
 
     if(params === 0){
       console.log('params == 0')
       try{
-        let mq = parseInt(localStorage.getItem('myQueue'));
+        var mq = parseInt(localStorage.getItem('myQueue'));
         
         console.log('localStorage empty try', mq)
         setState({
@@ -111,11 +103,23 @@ module.exports = function numFormatter(pre, que) {
       }
 
     } else {
-
+      
+      var audioAntrian = new Audio('./voice/nomor-antrian.mp3');
+      var audioA = new Audio('./voice/A.mp3');
+      var audioB = new Audio('./voice/B.mp3');
+      var audioC = new Audio('./voice/C.mp3');
+      var audioD = new Audio('./voice/D.mp3');
+      var audioE = new Audio('./voice/E.mp3');
+      var audioF = new Audio('./voice/F.mp3');
+      var audioG = new Audio('./voice/G.mp3');
+      var audioH = new Audio('./voice/H.mp3');
+      var audioI = new Audio('./voice/I.mp3');
+      var audioJ = new Audio('./voice/J.mp3');
+      
       audioAntrian.play();
       if(paramsTwo === 'A') {
         setTimeout(() => { 
-          audioA.play();   
+          audioA.play();
         }, 2000);
       }
       else if(paramsTwo === 'B') {
@@ -148,12 +152,12 @@ module.exports = function numFormatter(pre, que) {
         voiceValidation(params);
       } 
       else {
-        let see = params.toString();
-        let arr = see.split("");
+        var see = params.toString();
+        var arr = see.split("");
 
-        let i;
+        var i;
         for (i = 0; i < arr.length; i++) {
-          let par = parseInt(arr[i]);
+          var par = parseInt(arr[i]);
           setTimeout(() => { 
             voiceValidation(par);
             console.log('zzzzzzzzzkkkkkkkkkkkkkkkk', par)
@@ -163,6 +167,6 @@ module.exports = function numFormatter(pre, que) {
     }
   }
 
-  // return number.toLocaleString(locale);
+  return "success";
 
 };
