@@ -27,7 +27,7 @@ module.exports = function(pre, que) {
     var audioTujuh = new Audio('./voice/tujuh.mp3');
     var audioDelapan = new Audio('./voice/delapan.mp3');
     var audioSembilan = new Audio('./voice/sembilan.mp3');
-    
+
     if(params === 0) {
       setTimeout(() => { 
         audioKosong.play();
@@ -103,6 +103,7 @@ module.exports = function(pre, que) {
       }
 
     } else {
+      console.log('pre', pre)
       
       var audioAntrian = new Audio('./voice/nomor-antrian.mp3');
       var audioA = new Audio('./voice/A.mp3');
